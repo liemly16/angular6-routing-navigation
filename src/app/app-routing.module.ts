@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { HeroesComponent } from './pages/heroes/heroes.component'
 import { CrisisCenterComponent } from './pages/crisis-center/crisis-center.component'
+import { NotFoundComponent } from './pages/not-found/not-found.component'
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/heroes',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ]
 
