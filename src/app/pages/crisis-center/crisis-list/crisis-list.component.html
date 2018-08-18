@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li *ngFor="let crisis of crisises" class="list-group-item"><a routerLink="/crisis-center/{{crisis.id}}">{{crisis.name}}</a></li>
+</ul>
+
+<router-outlet></router-outlet>

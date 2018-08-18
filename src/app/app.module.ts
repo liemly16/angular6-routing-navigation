@@ -8,11 +8,11 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { ProvidersModule } from './providers/providers.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrisisCenterComponent,
     HeroesComponent,
     NotFoundComponent,
     AdminComponent,
@@ -20,7 +20,8 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProvidersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

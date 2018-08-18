@@ -4,7 +4,6 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { HeroesComponent } from './pages/heroes/heroes.component'
 import { CrisisCenterComponent } from './pages/crisis-center/crisis-center.component'
 import { NotFoundComponent } from './pages/not-found/not-found.component'
-
 const routes: Routes = [
   {
     path: 'heroes',
@@ -12,7 +11,8 @@ const routes: Routes = [
   },
   {
     path: 'crisis-center',
-    component: CrisisCenterComponent
+    loadChildren: '../app/pages/crisis-center/crisis-center.module#CrisisCenterModule',
+    data: { preload: true }
   },
   {
     path: '',
@@ -28,7 +28,9 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+      //enableTracing:true
+    })
   ],
   declarations: [
 
