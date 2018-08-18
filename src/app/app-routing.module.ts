@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { HeroesComponent } from './pages/heroes/heroes.component'
-import { CrisisCenterComponent } from './pages/crisis-center/crisis-center.component'
+import { LoginComponent } from './pages/login/login.component'
 import { NotFoundComponent } from './pages/not-found/not-found.component'
+import { AdminComponent } from './pages/admin/admin.component'
+
+import { AuthGuard } from './shared/auth.guard'
 const routes: Routes = [
   {
     path: 'heroes',
@@ -13,6 +16,15 @@ const routes: Routes = [
     path: 'crisis-center',
     loadChildren: '../app/pages/crisis-center/crisis-center.module#CrisisCenterModule',
     data: { preload: true }
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '',

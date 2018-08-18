@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HeroService } from './hero.service'
-import { CrisisService } from './/crisis.service'
+import { CrisisService } from './crisis.service'
+import { AuthService } from './auth.service'
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { CrisisService } from './/crisis.service'
   declarations: [],
   providers: [
     HeroService,
-    CrisisService
+    CrisisService,
+    AuthService
   ]
 })
 export class ProvidersModule { }

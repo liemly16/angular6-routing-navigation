@@ -9,6 +9,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ProvidersModule } from './providers/providers.module';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProvidersModule } from './providers/providers.module';
     HeroesComponent,
     NotFoundComponent,
     AdminComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
